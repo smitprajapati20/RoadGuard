@@ -13,20 +13,19 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        android:paddingHorizontal="24dp"
-        android:paddingVertical="32dp">
+        android:paddingHorizontal="@dimen/_21sdp"
+        android:paddingVertical="@dimen/_28sdp">
 
-        <!-- Brand logo -->
         <FrameLayout
-            android:layout_width="72dp"
-            android:layout_height="72dp"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
             android:background="@drawable/bg_splash_logo"
-            android:elevation="6dp"
+            android:elevation="@dimen/_5sdp"
             android:importantForAccessibility="no">
 
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
                 android:layout_gravity="center"
                 android:importantForAccessibility="no"
                 android:src="@drawable/ic_road_guard"/>
@@ -35,19 +34,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="@dimen/_16sdp"
             android:letterSpacing="-0.02"
             android:text="Create account"
             android:textColor="@color/primary_text"
-            android:textSize="32sp"
+            android:textSize="@dimen/_28sdp"
             android:textStyle="bold"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/_6sdp"
             android:gravity="center"
-            android:lineSpacingExtra="2dp"
+            android:lineSpacingExtra="@dimen/_2sdp"
             android:text="Join Road Guard and travel with help always close."
             android:textColor="@color/secondary_text"
             android:textSize="15sp"/>
@@ -55,16 +54,16 @@
         <EditText
             android:id="@+id/edtName"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginTop="28dp"
+            android:layout_height="@dimen/_47sdp"
+            android:layout_marginTop="@dimen/_16sdp"
             android:autofillHints="name"
-            android:background="@drawable/bg_input"
-            android:drawableStart="@drawable/ic_person"
-            android:drawablePadding="12dp"
-            android:hint="Your full name"
             android:imeOptions="actionNext"
             android:inputType="textPersonName|textCapWords"
-            android:paddingHorizontal="16dp"
+            android:background="@drawable/bg_input"
+            android:drawableStart="@drawable/ic_person"
+            android:drawablePadding="@dimen/_10sdp"
+            android:hint="Your full name"
+            android:paddingHorizontal="@dimen/_14sdp"
             android:textColor="@color/primary_text"
             android:textColorHint="@color/hint_text"
             android:textSize="15sp"/>
@@ -72,16 +71,16 @@
         <EditText
             android:id="@+id/edtEmail"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginTop="12dp"
+            android:layout_height="@dimen/_47sdp"
+            android:layout_marginTop="@dimen/_7sdp"
             android:autofillHints="emailAddress"
-            android:background="@drawable/bg_input"
-            android:drawableStart="@drawable/ic_email"
-            android:drawablePadding="12dp"
-            android:hint="you@example.com"
             android:imeOptions="actionNext"
             android:inputType="textEmailAddress"
-            android:paddingHorizontal="16dp"
+            android:background="@drawable/bg_input"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="@dimen/_10sdp"
+            android:hint="you@example.com"
+            android:paddingHorizontal="@dimen/_14sdp"
             android:textColor="@color/primary_text"
             android:textColorHint="@color/hint_text"
             android:textSize="15sp"/>
@@ -89,17 +88,17 @@
         <EditText
             android:id="@+id/edtPhone"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginTop="12dp"
+            android:layout_height="@dimen/_47sdp"
+            android:layout_marginTop="@dimen/_7sdp"
             android:autofillHints="phoneNational"
-            android:background="@drawable/bg_input"
-            android:drawableStart="@drawable/ic_phone"
-            android:drawablePadding="12dp"
-            android:hint="10-digit mobile number"
             android:imeOptions="actionNext"
             android:inputType="phone"
             android:maxLength="10"
-            android:paddingHorizontal="16dp"
+            android:background="@drawable/bg_input"
+            android:drawableStart="@drawable/ic_phone"
+            android:drawablePadding="@dimen/_10sdp"
+            android:hint="10-digit mobile number"
+            android:paddingHorizontal="@dimen/_14sdp"
             android:textColor="@color/primary_text"
             android:textColorHint="@color/hint_text"
             android:textSize="15sp"/>
@@ -107,16 +106,16 @@
         <EditText
             android:id="@+id/edtPassword"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginTop="12dp"
+            android:layout_height="@dimen/_47sdp"
+            android:layout_marginTop="@dimen/_7sdp"
             android:autofillHints="newPassword"
-            android:background="@drawable/bg_input"
-            android:drawableStart="@drawable/ic_lock"
-            android:drawablePadding="12dp"
-            android:hint="Create a password"
             android:imeOptions="actionNext"
             android:inputType="textPassword"
-            android:paddingHorizontal="16dp"
+            android:background="@drawable/bg_input"
+            android:drawableStart="@drawable/ic_lock"
+            android:drawablePadding="@dimen/_10sdp"
+            android:hint="Create a password"
+            android:paddingHorizontal="@dimen/_14sdp"
             android:textColor="@color/primary_text"
             android:textColorHint="@color/hint_text"
             android:textSize="15sp"/>
@@ -124,16 +123,64 @@
         <EditText
             android:id="@+id/edtConfirmPassword"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginTop="12dp"
+            android:layout_height="@dimen/_47sdp"
+            android:layout_marginTop="@dimen/_7sdp"
             android:autofillHints="newPassword"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
             android:background="@drawable/bg_input"
             android:drawableStart="@drawable/ic_lock"
-            android:drawablePadding="12dp"
+            android:drawablePadding="@dimen/_10sdp"
             android:hint="Re-enter your password"
+            android:paddingHorizontal="@dimen/_14sdp"
+            android:textColor="@color/primary_text"
+            android:textColorHint="@color/hint_text"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:text="Security question (used to reset your password)"
+            android:textColor="@color/secondary_text"
+            android:textSize="13sp"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_47sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:background="@drawable/bg_input">
+
+            <Spinner
+                android:id="@+id/spnSecurityQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:paddingEnd="@dimen/_35sdp"
+                android:popupBackground="@color/surface"
+                android:spinnerMode="dropdown"/>
+
+            <ImageView
+                android:layout_width="@dimen/_21sdp"
+                android:layout_height="@dimen/_21sdp"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_arrow_down"/>
+        </FrameLayout>
+
+        <EditText
+            android:id="@+id/edtSecurityAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_47sdp"
+            android:layout_marginTop="@dimen/_6sdp"
             android:imeOptions="actionDone"
-            android:inputType="textPassword"
-            android:paddingHorizontal="16dp"
+            android:inputType="text"
+            android:background="@drawable/bg_input"
+            android:drawableStart="@drawable/ic_lock"
+            android:drawablePadding="@dimen/_10sdp"
+            android:hint="Your answer"
+            android:paddingHorizontal="@dimen/_14sdp"
             android:textColor="@color/primary_text"
             android:textColorHint="@color/hint_text"
             android:textSize="15sp"/>
@@ -141,8 +188,8 @@
         <Button
             android:id="@+id/btnSignup"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginTop="28dp"
+            android:layout_height="@dimen/_47sdp"
+            android:layout_marginTop="@dimen/_14sdp"
             android:background="@drawable/bg_primary_button"
             android:backgroundTint="@null"
             android:stateListAnimator="@null"
@@ -155,7 +202,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/_8sdp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -172,8 +219,8 @@
                 android:layout_height="wrap_content"
                 android:clickable="true"
                 android:gravity="center_vertical"
-                android:minHeight="48dp"
-                android:paddingStart="6dp"
+                android:minHeight="@dimen/_43sdp"
+                android:paddingStart="@dimen/_5sdp"
                 android:text="Log in"
                 android:textColor="@color/selected_icon"
                 android:textSize="14sp"
