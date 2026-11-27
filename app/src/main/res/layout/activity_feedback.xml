@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    tools:context=".Feedback">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="32dp">
+
+        <TextView
+            android:id="@+id/txtBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:minHeight="48dp"
+            android:text="←  Back"
+            android:textColor="@color/selected_icon"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:letterSpacing="-0.02"
+            android:text="Rate your service"
+            android:textColor="@color/primary_text"
+            android:textSize="28sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="How was your road side assistance?"
+            android:textColor="@color/secondary_text"
+            android:textSize="14sp"/>
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp"
+            android:numStars="5"
+            android:progressTint="@color/accent_yellow"
+            android:stepSize="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Comments (optional)"
+            android:textColor="@color/secondary_text"
+            android:textSize="13sp"/>
+
+        <EditText
+            android:id="@+id/edtComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_input"
+            android:gravity="top|start"
+            android:hint="Tell us about the technician and the service"
+            android:inputType="textMultiLine|textCapSentences"
+            android:maxLength="300"
+            android:minHeight="120dp"
+            android:padding="16dp"
+            android:textColor="@color/primary_text"
+            android:textColorHint="@color/hint_text"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/btnSubmitFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/bg_primary_button"
+            android:backgroundTint="@null"
+            android:stateListAnimator="@null"
+            android:text="Submit feedback"
+            android:textAllCaps="false"
+            android:textColor="@color/button_text"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+</ScrollView>

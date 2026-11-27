@@ -14,8 +14,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RoadGuard">
         <activity
+            android:name=".Feedback"
+            android:exported="false" />
+        <activity
+            android:name=".MyRequest"
+            android:exported="false" />
+        <activity
             android:name=".RequestBatteryHelp"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".EditProfile"
             android:exported="false" />

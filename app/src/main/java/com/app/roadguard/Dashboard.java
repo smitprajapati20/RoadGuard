@@ -15,7 +15,7 @@ public class Dashboard extends AppCompatActivity {
 
     SharedPreferences sp;
     TextView WelcomeName;
-    View CardBattery, CardProfile, CardChangePassword, CardLogout;
+    View CardBattery, CardMyRequest, CardProfile, CardChangePassword, CardLogout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,12 +34,16 @@ public class Dashboard extends AppCompatActivity {
 
         WelcomeName = findViewById(R.id.txtWelcomeName);
         CardBattery = findViewById(R.id.cardBattery);
+        CardMyRequest = findViewById(R.id.cardMyRequest);
         CardProfile = findViewById(R.id.cardProfile);
         CardChangePassword = findViewById(R.id.cardChangePassword);
         CardLogout = findViewById(R.id.cardLogout);
 
         CardBattery.setOnClickListener(v ->
                 startActivity(new Intent(Dashboard.this, RequestBatteryHelp.class)));
+
+        CardMyRequest.setOnClickListener(v ->
+                startActivity(new Intent(Dashboard.this, MyRequest.class)));
 
         CardProfile.setOnClickListener(v ->
                 startActivity(new Intent(Dashboard.this, Profile.class)));
