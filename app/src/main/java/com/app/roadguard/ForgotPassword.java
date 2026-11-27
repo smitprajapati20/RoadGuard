@@ -24,8 +24,6 @@ public class ForgotPassword extends AppCompatActivity {
     Button FindAccount, ResetPassword;
     TextView SecurityQuestion, BackToLogin;
     View VerifyLayout;
-
-    // Loaded after the account is found
     String userId = "";
     String passwordSalt = "", passwordHash = "";
     String answerSalt = "", answerHash = "";
@@ -161,7 +159,7 @@ public class ForgotPassword extends AppCompatActivity {
     }
 
     private void goToLogin() {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, Login.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
         finish();

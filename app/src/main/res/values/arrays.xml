@@ -7,4 +7,24 @@
         <item>In which city were you born?</item>
         <item>What is your favorite childhood game?</item>
     </string-array>
+
+    <string-array name="vehicle_types">
+        <item>Select vehicle type</item>
+        <item>Car</item>
+        <item>Bike / Scooter</item>
+        <item>Auto-rickshaw</item>
+        <item>Truck / Van</item>
+        <item>Bus</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="battery_issues">
+        <item>Select the issue</item>
+        <item>Battery is dead (vehicle will not start)</item>
+        <item>Needs a jump start</item>
+        <item>Battery drains quickly</item>
+        <item>Battery replacement needed</item>
+        <item>Loose or corroded terminals</item>
+        <item>Other (describe below)</item>
+    </string-array>
 </resources>

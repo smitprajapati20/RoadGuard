@@ -33,11 +33,11 @@
             android:elevation="@dimen/_6sdp">
 
             <ImageView
-                android:layout_width="@dimen/_47sdp"
-                android:layout_height="@dimen/_47sdp"
+                android:layout_width="66dp"
+                android:layout_height="67dp"
                 android:layout_gravity="center"
                 android:importantForAccessibility="no"
-                android:src="@drawable/ic_road_guard"/>
+                android:src="@drawable/ic_road_guard" />
         </FrameLayout>
     </FrameLayout>
 

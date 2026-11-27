@@ -63,7 +63,6 @@ public class Login extends AppCompatActivity {
                 public void onResult(DataSnapshot user) {
                     setLoading(false);
 
-                    // Same message for "no account" and "wrong password"
                     if (user == null || !PasswordUtil.verify(password_text,
                             UserRepository.str(user, "passwordSalt"),
                             UserRepository.str(user, "passwordHash"))) {
@@ -79,7 +78,7 @@ public class Login extends AppCompatActivity {
                             .apply();
 
                     Toast.makeText(Login.this, "Login Successful!", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(Login.this, MainActivity.class));
+                    startActivity(new Intent(Login.this, Dashboard.class));
                     finish();
                 }
 

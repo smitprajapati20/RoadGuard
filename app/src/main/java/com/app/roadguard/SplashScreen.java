@@ -1,6 +1,7 @@
 package com.app.roadguard;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -15,11 +16,18 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class SplashScreen extends AppCompatActivity {
 
+    SharedPreferences sp;
     private static final long SPLASH_DURATION = 2400L;
     private final Handler handler = new Handler(Looper.getMainLooper());
     private final Runnable goNext = () -> {
+        if (!sp.getString(ConstantSP.userid, "").isEmpty()) {
+            startActivity(new Intent(this, Dashboard.class));
+            finish();
+            return;
+        }
+        else{
         startActivity(new Intent(SplashScreen.this, SignUp.class));
-        finish();
+        finish();}
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     };
     @Override
@@ -27,16 +35,15 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
+        sp = getSharedPreferences(ConstantSP.DataB, MODE_PRIVATE);
+
         View logo = findViewById(R.id.logoBadge);
         View pulse = findViewById(R.id.viewPulse);
         View title = findViewById(R.id.txtAppName);
         View tagline = findViewById(R.id.txtTagline);
         View progress = findViewById(R.id.progressSplash);
-
-        // Pulse ring is invisible in the layout; make it visible so its XML animation can run
         pulse.setVisibility(View.VISIBLE);
 
-        // All animations live in res/anim/*.xml
         logo.startAnimation(AnimationUtils.loadAnimation(this, R.anim.logo_pop_in));
         pulse.startAnimation(AnimationUtils.loadAnimation(this, R.anim.pulse_ring));
         title.startAnimation(AnimationUtils.loadAnimation(this, R.anim.slide_up_fade_in));

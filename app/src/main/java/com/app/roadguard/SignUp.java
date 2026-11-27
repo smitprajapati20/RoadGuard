@@ -60,7 +60,6 @@ public class SignUp extends AppCompatActivity {
             String question_text = SecurityQuestion.getSelectedItem().toString();
             String answer_text = PasswordUtil.normalizeAnswer(SecurityAnswer.getText().toString());
 
-            // ---- Validations (same logic as before) ----
             if (name_text.isEmpty()) {
                 Name.setError("Enter Name");
                 Name.requestFocus();
@@ -114,7 +113,6 @@ public class SignUp extends AppCompatActivity {
 
             setLoading(true);
 
-            // ---- Duplicate check: email, then contact ----
             UserRepository.findByEmail(email_text, new UserRepository.Callback() {
                 @Override
                 public void onResult(DataSnapshot existing) {
@@ -153,7 +151,7 @@ public class SignUp extends AppCompatActivity {
         });
     }
 
-    private void createUser(String name, String email, String number,
+    private void  createUser(String name, String email, String number,
                             String password, String question, String answer) {
         String userId = UserRepository.users().push().getKey();
         if (userId == null) {
@@ -184,7 +182,7 @@ public class SignUp extends AppCompatActivity {
                             .apply();
 
                     Toast.makeText(this, "User Added Successfully!", Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(SignUp.this, MainActivity.class));
+                    startActivity(new Intent(SignUp.this, Dashboard.class));
                     finish();
                 })
                 .addOnFailureListener(e -> fail("Could not sign up: " + e.getMessage()));
